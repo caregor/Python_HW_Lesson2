@@ -20,15 +20,17 @@
 # print(res)
 
 #Задача №2
+# number = int(input('Введите число: '))
+# res = 1
+# mul_result = []
+# result = []
+# for i in range(1, number + 1):
+#     string = ''
+#     res = i * res
+#     mul_result.append(res)
+#     for j in range(1, i + 1):
+#         string = string + f"*{str(j)}"
+#     result.append(string[1:])
+# print(mul_result , result)
+
 number = int(input('Введите число: '))
-res = 1
-mul_result = []
-result = []
-for i in range(1, number + 1):
-    string = ''
-    res = i * res
-    mul_result.append(res)
-    for j in range(1, i + 1):
-        string = string + f"*{str(j)}"
-    result.append(string[1:])
-print(mul_result , result)
