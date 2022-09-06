@@ -12,6 +12,8 @@
 
 4. Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Найдите произведение элементов на указанных
 позициях. Позиции хранятся в файле file.txt в одной строке одно число.
+
+5. Реализуйте алгоритм перемешивания списка.
 """
 import random
 
@@ -45,14 +47,19 @@ import random
 # summa = 0
 # for value in my_list:
 #     summa += value
-# print(f'Сумма значений ключей в словаре: {summa}')
+# print(f'Сумма значений списка: {summa}')
 
 # Задача №4
-n = int(input('Введите число: '))
-rnd_list = [random.randint(-n, n) for _ in range(n)]
-print(rnd_list)  # лист выводится для проверки результата
-summa = 0
-with open('file.txt', 'r') as f:
-    for line in f:  # позиции в файле 0, 1, 2.
-        summa += rnd_list[int(line)]
-print('Сумма элементов списка по позиция указанных в файл: ', summa)
+# n = int(input('Введите число: '))
+# rnd_list = [random.randint(-n, n) for _ in range(n)]
+# print(rnd_list)  # лист выводится для проверки результата
+# mul = 1
+# with open('file.txt', 'r') as f:
+#     for line in f:  # позиции в файле 0, 1, 2.
+#         mul *= rnd_list[int(line)]
+# print('Сумма элементов списка по позиция указанных в файл: ', mul)
+
+# Задача #5
+# my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# random.shuffle(my_list)
+# print(my_list)
