@@ -10,9 +10,10 @@
 
 3. Задайте список из n чисел последовательности $(1+\frac 1 n)^n$ и выведите на экран их сумму.
 
-Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Найдите произведение элементов на указанных
+4. Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Найдите произведение элементов на указанных
 позициях. Позиции хранятся в файле file.txt в одной строке одно число.
 """
+import random
 
 # Задача №1
 # a = input('Введите число:')
@@ -36,12 +37,22 @@
 #     result.append(string[1:])
 # print(mul_result , result)
 
-#Задача №3
+# Задача №3
 # my_range = int(input('Введите число: '))
 #
-# my_list = {(1 + 1 / n) ** n for n in range(1, my_range)}
+# my_list = [(1 + 1 / n) ** n for n in range(1, my_range)]
 # print(my_list)
 # summa = 0
 # for value in my_list:
 #     summa += value
 # print(f'Сумма значений ключей в словаре: {summa}')
+
+# Задача №4
+n = int(input('Введите число: '))
+rnd_list = [random.randint(-n, n) for _ in range(n)]
+print(rnd_list)  # лист выводится для проверки результата
+summa = 0
+with open('file.txt', 'r') as f:
+    for line in f:  # позиции в файле 0, 1, 2.
+        summa += rnd_list[int(line)]
+print('Сумма элементов списка по позиция указанных в файл: ', summa)
